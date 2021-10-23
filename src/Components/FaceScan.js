@@ -49,8 +49,7 @@ const styles = StyleSheet.create({
     },
     personNID:{
     height:  210,
-    width: 370,
-    marginLeft: 10
+    width: 320,
 
     },
     nidActions:{

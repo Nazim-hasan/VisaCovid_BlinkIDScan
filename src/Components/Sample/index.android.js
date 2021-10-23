@@ -305,22 +305,33 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     margin: 10
   },
+  buttonContainer:{
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor:"#d0daf7" ,
+    borderWidth: 2,
+    width: 280,
+    height: 180,
+    marginLeft: "10%",
+    borderRadius: 10,
+    marginTop: 40,
+    marginBottom: 5
+    
+  },
     IDScanLogo: {
         justifyContent: 'center',
         alignItems: 'center',
         height:  300,
         width: 260,
         marginBottom: 5,
-        marginLeft: 50
     },
     loginBtn: {
-        width: "90%",
+        width: "80%",
         borderRadius: 10,
         height: 50,
         alignItems: "center",
         justifyContent: "center",
-        marginTop: 5,
-        marginLeft: 20,
+        marginLeft: 30,
         marginBottom: 10,
         backgroundColor: "#021078",
     },
