@@ -21,7 +21,7 @@ const PCRLeftDate = (props) => {
                 </View>
                 
                 <TouchableOpacity style={styles.button} onPress={() => {
-                        props.navigation.navigate("");
+                        props.navigation.navigate("ID Scan");
                     }}>
                         <Text style={{textAlign:"center", color: "white", fontSize: 20}}>Ready to Test</Text>
                     </TouchableOpacity>

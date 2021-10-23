@@ -13,8 +13,10 @@ import {
     View,
     Image,
     ScrollView,
-    Button
+    Button,
+    TouchableOpacity
 } from 'react-native';
+import IDScan from "../../../assets/images/NIDScan.png";
 
 const licenseKey = Platform.select({
     // iOS license key for applicationID: com.microblink.sample
@@ -212,13 +214,15 @@ export default class Sample extends Component {
         let displayFields = this.state.results;
         return (
         <View style={styles.container}>
-            <Text style={styles.label}>CovidVisa</Text>
             <View style={styles.buttonContainer}>
-            <Button
+                <TouchableOpacity onPress={this.scan.bind(this)}>
+                    <Image style={styles.IDScanLogo} source={IDScan} />
+                </TouchableOpacity>
+            {/* <Button
                 onPress={this.scan.bind(this)}
                 title="Scan"
                 color="#48B2E8"
-            />
+            /> */}
             
             </View>
             <ScrollView
@@ -254,11 +258,11 @@ export default class Sample extends Component {
                 </View>
             )}
             <View style={styles.buttonContainerNext}>
-            <Button
-                onPress={() => { this.props.navigation.navigate("Face Scan")}}
-                title="Next"
-                color="#48B2E8"
-            />
+            <TouchableOpacity style={styles.loginBtn}  onPress={() => { 
+                    this.props.navigation.navigate("Face Scan")
+                }}>
+                <Text style={styles.textLogin}>NEXT</Text>
+            </TouchableOpacity>
             
             </View>
             
@@ -301,6 +305,28 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     margin: 10
   },
+    IDScanLogo: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        height:  300,
+        width: 260,
+        marginBottom: 5,
+        marginLeft: 50
+    },
+    loginBtn: {
+        width: "90%",
+        borderRadius: 10,
+        height: 50,
+        alignItems: "center",
+        justifyContent: "center",
+        marginTop: 5,
+        marginLeft: 20,
+        marginBottom: 10,
+        backgroundColor: "#021078",
+    },
+    textLogin:{
+        color: "#ffffff"
+    }
 });
 
 AppRegistry.registerComponent('Sample', () => Sample);

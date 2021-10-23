@@ -89,7 +89,7 @@ const Booster = (props) => {
                 
 
                 <TouchableOpacity style={styles.button} onPress={() => {
-                            props.navigation.navigate("Booster Payment Method");
+                            props.navigation.navigate("Artboard");
                     }}>
                         <Text style={{textAlign:"center", color: "white", fontSize: 20}}>Register & Exit</Text>
                 </TouchableOpacity>

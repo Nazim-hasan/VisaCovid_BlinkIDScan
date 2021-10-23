@@ -24,7 +24,7 @@ const vaccineLeftDate = (props) => {
                     </View>
                 </Card>
                 <TouchableOpacity style={styles.button} onPress={() => {
-                        props.navigation.navigate("");
+                        props.navigation.navigate("ID Scan");
                     }}>
                         <Text style={{textAlign:"center", color: "white", fontSize: 20}}>Ready to Vaccination</Text>
                     </TouchableOpacity>

@@ -18,7 +18,7 @@ export default function App(props) {
           </View>
           <View style={styles.loginSign}>
             <TouchableOpacity style={styles.loginSignBtn2} onPress={() =>{
-                props.navigation.navigate("Registration")
+                props.navigation.navigate("ID Scan")
               }}>
                 <Text style={styles.accountsText}>REGISTRATION</Text>
             </TouchableOpacity>
@@ -49,7 +49,7 @@ export default function App(props) {
       </TouchableOpacity>
  
       <TouchableOpacity style={styles.loginBtn} onPress={() =>{
-          props.navigation.navigate("ID Scan")
+          props.navigation.navigate("Home")
         }}>
         <Text style={styles.textLogin}>LOGIN</Text>
       </TouchableOpacity>
