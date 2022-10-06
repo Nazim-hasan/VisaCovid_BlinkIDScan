@@ -9,7 +9,7 @@ return (
 <View style={styles.container}>
 {NotificationData.map((val, ind) => {
 return (
-        <Card style={styles.cardStyle}>
+        <Card key={String(ind)} style={styles.cardStyle}>
         <Card.Content>
             <Title style={{fontSize: 20}}>{val.title}</Title>
             <Paragraph style={{fontSize: 16}}>{val.statusDetails}</Paragraph>
