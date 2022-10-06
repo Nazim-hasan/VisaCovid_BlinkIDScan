@@ -36,25 +36,19 @@ const Stack = createNativeStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Welcome"
-          component={Welcome}
-          options={{title: 'Welcome'}}
-        />
+
+      <Stack.Navigator >
+        <Stack.Screen name="Welcome" component={Welcome} options={{ title: 'Welcome' }} />
         <Stack.Screen name="Login" component={AccountsEntry} />
         <Stack.Screen name="Otp" component={Otp} />
         {/* <Stack.Screen name="Registration" component={RegistrationHome} /> */}
-        <Stack.Screen
-          name="ID Scan"
-          component={IDScan}
-          options={{title: 'ID Scan'}}
-        />
-
-        <Stack.Screen name="Home" component={NavigationTab} />
-        <Stack.Screen name="FaceScan" component={FaceScan} />
+        <Stack.Screen name="ID Scan" component={IDScan} options={{ title: 'ID Scan' }} />
+        <Stack.Screen name="Face Scan" component={FaceScan}  />
         <Stack.Screen name="NIDDetails" component={NidInformation} />
-        <Stack.Screen name="RegistrationForm" component={RegistrationForm} />
+        <Stack.Screen name="Home" component={NavigationTab} />
+
+        <Stack.Screen name="Registration Form" component={RegistrationForm} />
+
         <Stack.Screen name="Personal Information" component={UserInfoEdit} />
 
         <Stack.Screen name="Antibody" component={Antibody} />
