@@ -32,7 +32,7 @@ const Otp = ({navigation, route}) => {
         if (response.data.status === '1') {
           navigation.navigate('Home');
         } else if (response.data.status === '0') {
-          alert('Wrong Phone or password');
+          alert('Wrong OTP');
         }
       })
       .catch(function (error) {

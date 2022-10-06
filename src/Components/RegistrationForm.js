@@ -4,7 +4,7 @@ import {TouchableOpacity} from 'react-native';
 import applogo from '../../assets/updated/PVE.png';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {useState} from 'react';
-
+import axios from 'axios';
 const RegistrationForm = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -21,7 +21,27 @@ const RegistrationForm = ({navigation}) => {
       confirmPassword !== ''
     ) {
       console.log(email + phone + newPassword + confirmPassword);
-      navigation.navigate('OtpVerification', {phone});
+      const data = {email, phone, password: newPassword};
+      axios
+        .post(
+          'http://192.168.0.103/PVE/Takamol_Center_Development/public/api/user/create',
+          data,
+        )
+        .then(function (response) {
+          console.log(response);
+          if (response.data.status === '3') {
+            navigation.navigate('OtpVerification', {phone});
+          } else if (response.data.status === '2') {
+            alert('Email already exist! Try with another Email');
+            return;
+          } else if (response.data.status === '1') {
+            alert('Number already exist! Try with another Phone number');
+            return;
+          }
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     } else {
       alert('please fill all field !');
     }

@@ -14,6 +14,10 @@ export default function App(props, {navigation}) {
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
   const handleLogin = e => {
+    if (phone === '' && password === '') {
+      alert('Enter phone and password');
+      return;
+    }
     if (phone !== '' && password !== '') {
       const data = {phone, password};
       console.log(data);
@@ -27,7 +31,7 @@ export default function App(props, {navigation}) {
           if (response.data.status === 'success') {
             props.navigation.navigate('OtpVerification', {phone});
           } else if (response.data.status === 'failed') {
-            alert('Wrong OTP');
+            alert('Wrong Username or password');
           }
         })
         .catch(function (error) {
