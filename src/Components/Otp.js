@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import OTPInputView from '@twotalltotems/react-native-otp-input';
-import axios from 'axios';
+import axios from 'react-native-axios';
 import {
   View,
   StyleSheet,

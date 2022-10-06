@@ -20,6 +20,7 @@
     "blinkid-react-native": "^5.14.0",
     "react": "17.0.1",
     "react-native": "0.64.0",
+    "react-native-axios": "^0.17.1",
     "react-native-elements": "^3.4.2",
     "react-native-image-slider-box": "^1.1.9",
     "react-native-paper": "^4.9.2",
