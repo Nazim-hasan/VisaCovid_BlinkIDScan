@@ -40,7 +40,7 @@ const App = () => {
       <Stack.Navigator >
         <Stack.Screen name="Welcome" component={Welcome} options={{ title: 'Welcome' }} />
         <Stack.Screen name="Login" component={AccountsEntry} />
-        <Stack.Screen name="Otp" component={Otp} />
+        <Stack.Screen name="OtpVerification" component={Otp} />
         {/* <Stack.Screen name="Registration" component={RegistrationHome} /> */}
         <Stack.Screen name="ID Scan" component={IDScan} options={{ title: 'ID Scan' }} />
         <Stack.Screen name="Face Scan" component={FaceScan}  />
