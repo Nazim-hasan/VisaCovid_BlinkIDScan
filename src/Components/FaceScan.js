@@ -1,19 +1,39 @@
 import * as React from "react";
-import { Button, Card } from "react-native-paper";
-import { TouchableOpacity, StyleSheet, View, Text } from "react-native";
+
+import { TouchableOpacity, StyleSheet, View, Text,Button } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import NID from "../../assets/images/face.png";
 
 const FaceScan = (props) => {
   return(
     <View style={styles.container}>
-      <Text style={styles.nidComment}>Place your face to take a clear photo</Text>
+<View>
+  <Text>NID CRAD Img Here </Text>
+  <Text>NID CRAD Information Here </Text>
+</View>
+
+
+<View>
+  <Text>face id scan Contents</Text>
+  <Button title='Registration' onPress={()=>props.navigation.navigate('RegistrationForm')} />
+  
+</View>
+
+
+
+
+
+
+
+
+
+      {/* <Text style={styles.nidComment}>Place your face to take a clear photo</Text>
       <Card style={{marginTop: 30, marginBottom: 365, width: "90%"}}>
         <Card.Cover style={styles.personNID} source={NID} />
         <Card.Actions style={styles.nidActions}>
           <TouchableOpacity>
             <Button labelStyle={{ fontSize: 35 }} icon="swap-horizontal"/>
-             {/* <Icon name="rocket" size={30} color="#900" /> */}
+       
           </TouchableOpacity>
           <TouchableOpacity>
             <Button labelStyle={{ fontSize: 35 }} icon="camera"/>
@@ -29,7 +49,7 @@ const FaceScan = (props) => {
                   <Text style={{textAlign:"center", color: "white", fontSize: 20}}>Next</Text>
               </TouchableOpacity>
           </View>
-      </Card>
+      </Card> */}
     </View>
   )
 }

@@ -16,7 +16,7 @@ import {
     Button,
     TouchableOpacity
 } from 'react-native';
-import IDScan from "../../../assets/images/NIDScan.png";
+import IDScan from "../../../assets/updated/resize.png";
 
 const licenseKey = Platform.select({
     // iOS license key for applicationID: com.microblink.sample
@@ -214,17 +214,19 @@ export default class Sample extends Component {
         let displayFields = this.state.results;
         return (
         <View style={styles.container}>
-            <View style={styles.buttonContainer}>
-                <TouchableOpacity onPress={this.scan.bind(this)}>
+<Text style={{textAlign:'center',fontSize:20,marginTop:10}}>Scan Your ID Card</Text>
+        <TouchableOpacity style={{justifyContent:'center',alignItems:'center'}} onPress={this.scan.bind(this)}>
                     <Image style={styles.IDScanLogo} source={IDScan} />
                 </TouchableOpacity>
+
+              
             {/* <Button
                 onPress={this.scan.bind(this)}
                 title="Scan"
                 color="#48B2E8"
             /> */}
             
-            </View>
+      
             <ScrollView
             automaticallyAdjustContentInsets={false}
             scrollEventThrottle={200}y>
@@ -312,17 +314,17 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     width: 280,
     height: 180,
-    marginLeft: "10%",
+    marginLeft: "17%",
     borderRadius: 10,
     marginTop: 40,
-    marginBottom: 5
+  
     
   },
     IDScanLogo: {
         justifyContent: 'center',
         alignItems: 'center',
         height:  300,
-        width: 260,
+        width: 300,
         marginBottom: 5,
     },
     loginBtn: {
@@ -331,7 +333,7 @@ const styles = StyleSheet.create({
         height: 50,
         alignItems: "center",
         justifyContent: "center",
-        marginLeft: 30,
+        marginLeft: '10%',
         marginBottom: 10,
         backgroundColor: "#021078",
     },

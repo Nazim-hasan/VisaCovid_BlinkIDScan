@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import logo from '../../assets/updated/applogo.png';
+import logo from '../../assets/updated/PVE.png';
 import background from '../../assets/images/Group162.png';
 
 import {View, StyleSheet, Image, TouchableOpacity} from 'react-native';
