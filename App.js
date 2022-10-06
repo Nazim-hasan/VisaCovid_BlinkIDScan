@@ -30,6 +30,8 @@ import Artboard from './src/Components/Home/Artboard';
 import Otp from './src/Components/Otp';
 import RegistrationForm from './src/Components/RegistrationForm';
 import NidInformation from './src/Components/NidInformation';
+import Cirtificate from './src/Components/Cirtificate';
+import TheoriticalTest from './src/Components/TheoriticalTest';
 
 const Stack = createNativeStackNavigator();
 
@@ -52,10 +54,12 @@ const App = () => {
         <Stack.Screen name="Personal Information" component={UserInfoEdit} />
 
         <Stack.Screen name="Antibody" component={Antibody} />
+        <Stack.Screen name="TheoriticalTest" component={TheoriticalTest} />
 
         <Stack.Screen name="PCR" component={PCR} />
         {/* <Stack.Screen name="PCR Payment Method" component={PCRPaymentMethod} /> */}
         <Stack.Screen name="PCR Date Status" component={PCRLeftDate} />
+        <Stack.Screen name="Cirtificate" component={Cirtificate} />
 
         <Stack.Screen
           name="Vaccine Registration"

@@ -1,7 +1,9 @@
-import {StyleSheet, Text, View, Button, TextInput, Image} from 'react-native';
-import React from 'react';
-import {TouchableOpacity} from 'react-native';
-import applogo from '../../assets/updated/PVE.png';
+
+import { StyleSheet, Text, View, Button, TextInput, Image } from 'react-native'
+import React from 'react'
+import { TouchableOpacity } from 'react-native'
+import applogo from '../../assets/updated/appLogo.png'
+
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {useState} from 'react';
 import axios from 'react-native-axios';

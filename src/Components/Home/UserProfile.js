@@ -13,12 +13,13 @@ const UserProfile = (props) => {
         <View style={styles.AntibodyLogo}>
           <Image style={styles.AntibodyLogoImg} source={AntibodyLogo} />
           <View style={styles.UserID}>
-            <Text style={{ width: "100%", marginLeft: "27%",color: "#050505" }}>ID: <Text style={{fontWeight: "bold", padding: 10}}>954 322 541</Text> </Text>
+            <Text style={{textAlign:'center'}}> Mizanur Rahman Raihan </Text>
+            <Text style={{textAlign:'center'}}>ID: 992886</Text>
           </View>
         </View>
 
         <Card style={styles.cardStyle}>
-          <View style={styles.subscribtionBtn}>
+          {/* <View style={styles.subscribtionBtn}>
             <View style={{width: "60%", justifyContent: "center", alignItems: 'center', marginLeft: 20}}>
               <TouchableOpacity style={styles.subscribtionBtnMain} onPress={() =>{
                   props.navigation.navigate("")
@@ -26,10 +27,10 @@ const UserProfile = (props) => {
                   <Text style={styles.PaymentText}>Subscribe Now</Text>
               </TouchableOpacity>
             </View>
-          </View>
+          </View> */}
           
           <View style={{ paddingTop: 20 }}>
-            <Text style={styles.testStyle}>COVID-19 Antibody</Text>
+            <Text style={styles.testStyle}>PVE Profile Information</Text>
             <View
               style={{
                 borderBottomColor: "#e8e2e1",
@@ -38,21 +39,25 @@ const UserProfile = (props) => {
               }}
             />
             <View style={styles.testContents}>
-              <Text style={styles.testStartItem}>Last affected</Text>
-              <Text style={styles.testEndItem}>12 Sep 2021</Text>
+              <Text style={styles.testStartItem}>Full Name</Text>
+              <Text style={styles.testEndItem}>Mizanur Rahman Raihan</Text>
             </View>
             <View style={styles.testContents}>
-              <Text style={styles.testStartItem}>Recovered</Text>
-              <Text style={styles.testEndItem}>22 Sep 2021</Text>
+              <Text style={styles.testStartItem}> Gender</Text>
+              <Text style={styles.testEndItem}>Male</Text>
             </View>
             <View style={styles.testContents}>
-              <Text style={styles.testStartItem}>Antibody Remaining</Text>
-              <Text style={styles.testEndItem}>4 mon 14 days</Text>
+              <Text style={styles.testStartItem}>Age</Text>
+              <Text style={styles.testEndItem}>25</Text>
+            </View>
+            <View style={styles.testContents}>
+              <Text style={styles.testStartItem}>PVE result</Text>
+              <Text style={styles.testEndItem}>Passed</Text>
             </View>
           </View>
 
           <View style={{ paddingTop: 10 }}>
-            <Text style={styles.testStyle}>PCR Test</Text>
+            <Text style={styles.testStyle}>Professional Skill test</Text>
             <View
               style={{
                 borderBottomColor: "#e8e2e1",
@@ -79,7 +84,7 @@ const UserProfile = (props) => {
           </View>
 
           <View style={{ paddingTop: 10 }}>
-            <Text style={styles.testStyle}>Vaccine</Text>
+            <Text style={styles.testStyle}>Semi Skill test</Text>
             <View
               style={{
                 borderBottomColor: "#e8e2e1",
@@ -87,22 +92,15 @@ const UserProfile = (props) => {
                 marginBottom: 10,
               }}
             />
-            <View style={styles.testContents}>
-              <Text style={styles.testStartItem}>Dose 1</Text>
-              <Text style={styles.testEndItem}>No data</Text>
+              <View style={styles.testContents}>
+              <Text style={styles.testStartItem}>Last Test</Text>
+              <Text style={styles.testEndItem}>12 Sep 2021</Text>
             </View>
             <View style={styles.testContents}>
-              <Text style={styles.testStartItem}>Dose 2</Text>
-              <Text style={styles.testEndItem}>No data</Text>
+              <Text style={styles.testStartItem}>Result</Text>
+              <Text style={styles.testEndItem}>Passed</Text>
             </View>
-            <View style={styles.testContents}>
-              <Text style={styles.testStartItem}>Vaccine name</Text>
-              <Text style={styles.testEndItem}>No data</Text>
-            </View>
-            <View style={styles.testContents}>
-              <Text style={styles.testStartItem}>Vaccine center</Text>
-              <Text style={styles.testEndItem}>No data</Text>
-            </View>
+           
             
           </View>
           <View style={styles.accountsForm}>
