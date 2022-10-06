@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginLeft: '10%',
     marginBottom: 10,
-    backgroundColor: '#021078',
+    backgroundColor: 'green',
   },
   textNext: {
     color: '#ffffff',

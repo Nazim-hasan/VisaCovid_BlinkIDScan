@@ -8,7 +8,7 @@ export default function App(props) {
   return (
     <ScrollView>
     <View style={styles.container}>
-      <Image style={styles.image} source={require("../../assets/updated/PVE.png")} />
+      <Image style={styles.image} source={require("../../assets/updated/appLogo.png")} />
 
       <View style={styles.accountsForm}>
           <View style={styles.loginSign}>
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginTop: 30,
-    backgroundColor: "#021078",
+    backgroundColor: "green",
   },
   textLogin:{
       color: "#ffffff"
