@@ -11,7 +11,7 @@ import AddCountry from "../../../assets/images/CAddCountry.jpeg";
 import Booster from "../../../assets/images/CBooster.jpeg";
 
 
-const Home = (props) =>{
+const Dashboard = (props) =>{
     return(
         <ScrollView>
           <View style={styles.container}>
@@ -338,4 +338,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home;
+export default Dashboard;
