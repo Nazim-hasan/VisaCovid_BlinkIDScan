@@ -4,7 +4,7 @@ import {TouchableOpacity} from 'react-native';
 import applogo from '../../assets/updated/PVE.png';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {useState} from 'react';
-import axios from 'axios';
+import axios from 'react-native-axios';
 const RegistrationForm = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
