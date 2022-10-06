@@ -10,10 +10,12 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/clipboard": "^1.5.1",
     "@react-native-picker/picker": "^2.1.0",
     "@react-navigation/bottom-tabs": "^6.0.9",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
+    "@twotalltotems/react-native-otp-input": "^1.3.11",
     "blinkid-react-native": "^5.14.0",
     "react": "17.0.1",
     "react-native": "0.64.0",

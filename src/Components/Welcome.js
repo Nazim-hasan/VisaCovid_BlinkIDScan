@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/updated/applogo.png';
 import background from '../../assets/images/Group162.png';
 
 import {View, StyleSheet, Image, TouchableOpacity} from 'react-native';
@@ -7,7 +7,7 @@ import {View, StyleSheet, Image, TouchableOpacity} from 'react-native';
 const Welcome = (props) => {
 
          return (
-             <View>
+             <View style={styles.container}>
                  <View>
                      <TouchableOpacity onPress={() =>{
                          props.navigation.navigate("Login")
@@ -28,15 +28,12 @@ const styles = StyleSheet.create({
        justifyContent: 'center',
        alignItems: 'center',
    },
-   logo: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        height:  250,
-        width: 200,
-        marginBottom: 5,
-        marginTop: "50%",
-        marginLeft: 80
-   },
+   logo:{
+    height:200,
+    width:200,
+    resizeMode:'contain'
+   }
+
 //    background:{
 //        width: '100%',
 //        height: 450,
