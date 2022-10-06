@@ -42,7 +42,7 @@ const FaceScan = props => {
           <TouchableOpacity
             style={styles.button}
             onPress={() => {
-              props.navigation.navigate('RegistrationForm');
+              props.navigation.navigate('Registration Form');
             }}>
             <Text style={{textAlign: 'center', color: 'white', fontSize: 20}}>
               Next

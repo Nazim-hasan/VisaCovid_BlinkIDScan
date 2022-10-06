@@ -76,7 +76,7 @@ const NidInformation = props => {
           <TouchableOpacity
             style={styles.nextBtn}
             onPress={() => {
-              props.navigation.navigate('FaceScan');
+              props.navigation.navigate('Face Scan');
             }}>
             <Text style={styles.textNext}>NEXT</Text>
           </TouchableOpacity>
