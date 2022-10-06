@@ -28,6 +28,7 @@ import Synchronise from "./src/Components/Home/HomeComponents/Synchronise";
 import Booster from "./src/Components/Home/HomeComponents/Booster/Booster";
 // import BoosterPaymentMethod from "./src/Components/Home/HomeComponents/Booster/BoosterPaymentMethod";
 import Artboard from "./src/Components/Home/Artboard";
+import Otp from './src/Components/Otp';
 
 const Stack = createNativeStackNavigator();
 
@@ -37,6 +38,7 @@ const App = () => {
       <Stack.Navigator>
         <Stack.Screen name="Welcome" component={Welcome} options={{ title: 'Welcome' }} />
         <Stack.Screen name="Login" component={AccountsEntry} />
+        <Stack.Screen name="Otp" component={Otp} />
         {/* <Stack.Screen name="Registration" component={RegistrationHome} /> */}
         <Stack.Screen name="ID Scan" component={IDScan} options={{ title: 'ID Scan' }} />
         <Stack.Screen name="Home" component={NavigationTab} />

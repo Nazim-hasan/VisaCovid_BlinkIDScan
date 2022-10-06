@@ -8,7 +8,7 @@ export default function App(props) {
   return (
     <ScrollView>
     <View style={styles.container}>
-      <Image style={styles.image} source={require("../../assets/images/logo.png")} />
+      <Image style={styles.image} source={require("../../assets/updated/applogo.png")} />
 
       <View style={styles.accountsForm}>
           <View style={styles.loginSign}>
@@ -49,7 +49,7 @@ export default function App(props) {
       </TouchableOpacity>
  
       <TouchableOpacity style={styles.loginBtn} onPress={() =>{
-          props.navigation.navigate("Home")
+          props.navigation.navigate("Otp")
         }}>
         <Text style={styles.textLogin}>LOGIN</Text>
       </TouchableOpacity>
@@ -82,10 +82,12 @@ const styles = StyleSheet.create({
       width: "50%"
   },
   image: {
+    marginTop:50,
     justifyContent: 'center',
     alignItems: 'center',
-    height:  280,
-    width: 230,
+    height:  200,
+    width: 200,
+    resizeMode:'contain'
   },
  
   inputView: {
