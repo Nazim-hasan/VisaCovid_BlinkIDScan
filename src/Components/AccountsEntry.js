@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { ScrollView, StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from "react-native";
 
 export default function App(props) {
-  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
  
   return (
     <ScrollView>
     <View style={styles.container}>
-      <Image style={styles.image} source={require("../../assets/updated/applogo.png")} />
+      <Image style={styles.image} source={require("../../assets/updated/PVE.png")} />
 
       <View style={styles.accountsForm}>
           <View style={styles.loginSign}>
@@ -28,9 +28,9 @@ export default function App(props) {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="Email."
+          placeholder="Phone no."
           placeholderTextColor="#003f5c"
-          onChangeText={(email) => setEmail(email)}
+          onChangeText={(phone) => setEmail(phone)}
         />
       </View>
  

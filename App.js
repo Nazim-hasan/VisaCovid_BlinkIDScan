@@ -29,6 +29,7 @@ import Booster from "./src/Components/Home/HomeComponents/Booster/Booster";
 // import BoosterPaymentMethod from "./src/Components/Home/HomeComponents/Booster/BoosterPaymentMethod";
 import Artboard from "./src/Components/Home/Artboard";
 import Otp from './src/Components/Otp';
+import RegistrationForm from './src/Components/RegistrationForm';
 
 const Stack = createNativeStackNavigator();
 
@@ -41,8 +42,10 @@ const App = () => {
         <Stack.Screen name="Otp" component={Otp} />
         {/* <Stack.Screen name="Registration" component={RegistrationHome} /> */}
         <Stack.Screen name="ID Scan" component={IDScan} options={{ title: 'ID Scan' }} />
+
         <Stack.Screen name="Home" component={NavigationTab} />
         <Stack.Screen name="Face Scan" component={FaceScan} />
+        <Stack.Screen name="RegistrationForm" component={RegistrationForm} />
         <Stack.Screen name="Personal Information" component={UserInfoEdit} />
 
         <Stack.Screen name="Antibody" component={Antibody} />
