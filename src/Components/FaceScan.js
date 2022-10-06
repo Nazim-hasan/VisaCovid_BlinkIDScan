@@ -15,7 +15,7 @@ const FaceScan = (props) => {
 
 <View>
   <Text>face id scan Contents</Text>
-  <Button title='Registration' onPress={()=>props.navigation.navigate('RegistrationForm')} />
+  <Button title='Registration' onPress={()=>props.navigation.navigate('Registration Form')} />
   
 </View>
 
