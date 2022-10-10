@@ -9,10 +9,13 @@ import {
 } from 'react-native';
 import React from 'react';
 import {Picker} from '@react-native-picker/picker';
+import DatePicker from 'react-native-date-picker';
 import {useState} from 'react';
 
 const Application = () => {
   const [selectedGender, setSelectedGender] = useState();
+  const [date, setDate] = useState(new Date());
+  const [open, setOpen] = useState(false);
 
   const handleApplication = e => {
     console.log(selectedGender);
@@ -36,28 +39,53 @@ const Application = () => {
           placeholder="Father Name"
           placeholderTextColor={'gray'}
         />
-
-        <Picker
-          selectedValue={selectedGender}
-          onValueChange={(itemValue, itemIndex) =>
-            setSelectedGender(itemValue)
-          }>
-          <Picker.Item label="Java" value="java" />
-          <Picker.Item label="JavaScript" value="js" />
-        </Picker>
-
         <Text style={{marginLeft: 10}}>Gender</Text>
-        <TextInput
-          style={styles.inputFiel}
-          placeholder="Gender"
-          placeholderTextColor={'gray'}
-        />
+        <View
+          style={{
+            borderWidth: 0.8,
+            backgroundColor: '#FCFCFC',
+            height: 40,
+            borderColor: 'gray',
+            borderRadius: 25,
+            color: 'black',
+            margin: 10,
+          }}>
+          <Picker
+            style={{marginTop: -7}}
+            selectedValue={selectedGender}
+            onValueChange={(itemValue, itemIndex) =>
+              setSelectedGender(itemValue)
+            }>
+            <Picker.Item label="Male" value="Male" color="gray" />
+            <Picker.Item label="Female" value="Female" color="gray" />
+            <Picker.Item label="Others" value="Others" color="gray" />
+          </Picker>
+        </View>
 
-        <Text style={{marginLeft: 10}}>DOB</Text>
+        <Text style={{marginLeft: 10}} onPress={() => setOpen(true)}>
+          DOB
+        </Text>
+        <DatePicker
+          modal
+          mode="date"
+          open={open}
+          date={date}
+          onConfirm={date => {
+            setOpen(false);
+            setDate(date);
+          }}
+          onCancel={() => {
+            setOpen(false);
+          }}
+        />
+        <Text onPress={() => setOpen(true)} style={styles.inputFiel}>
+          {date === '' ? 'Pick Date' : JSON.stringify(date)}
+        </Text>
         <TextInput
           style={styles.inputFiel}
           placeholder="DOB"
           placeholderTextColor={'gray'}
+          onPress={() => setOpen(true)}
         />
 
         <Text style={{marginLeft: 10}}>Passport No</Text>
